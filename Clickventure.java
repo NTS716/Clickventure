@@ -39,8 +39,21 @@ class Clickventure {
 		// game loop
 		while (true) {
 
+			// set the text and size for the clickCounter
 			Frame.clickCounter.setText("Clicks: " + clicks);
 			Frame.clickCounter.setSize(Frame.clickCounter.getPreferredSize());
+
+			// set the text and size for the clickPowerIndicator
+			Frame.clickPowerIndicator.setText("Click Power: " + clickPower);
+			Frame.clickPowerIndicator.setSize(Frame.clickPowerIndicator.getPreferredSize());
+			
+			// set the text and size for the critPowerIndicator
+			Frame.critPowerIndicator.setText("Crit Power: x" + critPower);
+			Frame.critPowerIndicator.setSize(Frame.critPowerIndicator.getPreferredSize());
+
+			// set the text and size for the critChanceIndicator
+			Frame.critChanceIndicator.setText("Crit Chance: 1:" + critChance);
+			Frame.critChanceIndicator.setSize(Frame.critChanceIndicator.getPreferredSize());
 		}
 	}
 }

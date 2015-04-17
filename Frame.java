@@ -16,6 +16,9 @@ public class Frame extends JFrame {
 	public static JButton clickButton;
 	public static Font damageFont;
 	public static JLabel damageIndicator;
+	public static JLabel clickPowerIndicator;
+	public static JLabel critChanceIndicator;
+	public static JLabel critPowerIndicator;
 
 	Frame()
 	{
@@ -62,12 +65,30 @@ public class Frame extends JFrame {
 		// set the attributes of the damageIndicator
 		damageIndicator.setFont(damageFont);
 
+		// create the clickPowerIndicator
+		clickPowerIndicator = new JLabel("");
+		// set the attributes for the clickPowerIndicator
+		clickPowerIndicator.setLocation(400,100);
+
+		// create the critPowerIndicator
+		critPowerIndicator = new JLabel("");
+		// set the attributes for the critPowerIndicator
+		critPowerIndicator.setLocation(400,150);
+
+		// create the critChanceIndicator
+		critChanceIndicator = new JLabel("");
+		// set the attributes for the critChanceIndicator
+		critChanceIndicator.setLocation(400,200);
+
 		// add the components to the Frame
 		add(tabSelector);	
 		add(clickCounter);
 		add(topSeparator);
 		add(damageIndicator);
 		add(clickButton);
+		add(clickPowerIndicator);
+		add(critPowerIndicator);
+		add(critChanceIndicator);
 
 		//add the Handler to the components
 		clickButton.addActionListener(new Handler());
